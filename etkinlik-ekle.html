@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="2416501033.css">
 </head>
 <body>
-
+<header>
     <h1>Etkinlik Ekle</h1>
     <nav>
-        <a href="etkinlikler.html">Ana Sayfa</a>
-        <a href="etkinlik-detay.html">Etkinlikler </a>
-        <a href="etkinlik-ekle.html"> Detay Ekle</a>
+        <a href="index.html">Ana Sayfa</a>
+          <a href="etkinlikler.html">Etkinlikler</a>
+          <a href="etkinlik-ekle.html">Ekle</a>
+          <a href="etkinlik-guncelle.html">Güncelle</a>
+
     </nav>
+</header>
+    <main>
+    <form class="etkinlik-form">
+      <div class="form-grup">
+        <label for="ad">Etkinlik adı</label>
+        <input type="text" id="ad" name="ad">
+      </div>
 
-    <form action="#" method="post">
-        
-        <div>
-            <label for="etkinlikAdi">Etkinlik Adı</label><br>
-            <input type="text" id="etkinlikAdi" name="etkinlikAdi" required>
-        </div>
-        <br>
-        <div>
-            <label for="kategori">Kategori</label><br>
-            <select id="kategori" name="kategori" required>
-                <option value="Seminer">Seminer</option>
-                <option value="Atölye">Atölye</option>
-                <option value="Konferans">Konferans</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <label for="tarihSaat">Tarih / Saat</label><br>
-            <input type="datetime-local" id="tarihSaat" name="tarihSaat" required>
-        </div>
-        <br>
-        <div>
-            <label for="aciklama">Açıklama</label><br>
-            <textarea id="aciklama" name="aciklama" rows="4" cols="40"></textarea>
-        </div>
-        <br>
-        <button type="submit">Kaydet</button>
+      <div class="form-grup">
+        <label for="kategori">Kategori</label>
+        <select id="kategori" name="kategori">
+          <option value="" selected>Seçiniz ▾</option>
+          <option value="seminer">Seminer</option>
+          <option value="atolye">Atölye</option>
+          <option value="soylesi">Söyleşi</option>
+        </select>
+      </div>
 
+      <div class="form-grup">
+        <label for="tarih">Tarih</label>
+        <input type="text" id="tarih" name="tarih" class="hata" value="boş bırakıldı">
+      </div>
+
+      <div class="form-grup">
+        <label for="aciklama">Açıklama</label>
+        <textarea id="aciklama" name="aciklama" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Kaydet</button>
     </form>
-
+  </main>
 </body>
 </html>

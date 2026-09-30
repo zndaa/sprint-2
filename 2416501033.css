@@ -1,0 +1,112 @@
+/* Zeynep Nida Çiçek-2416501033 */
+:root {
+  --no: 2416501033;
+  --ton: mod(var(--no), 360);
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: "Trebuchet MS", sans-serif;
+  --bosluk-m: 1rem;  --kose: 8px;
+}
+body { font-family: var(--font); }
+
+body {
+  font-family: var(--font);
+  background-color: var(--renk-zemin);
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+header {
+  background-color: var(--renk-ana);
+  color: #ffffff;
+  padding: 1.25rem 1.5rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 1.25rem;
+  font-size: 0.95rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Ana Gövde */
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Grid Kartlar */
+.etkinlikler {
+  display: grid;
+  gap: var(--bosluk-m);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 650px) {
+  .etkinlikler {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.kart {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+}
+
+.kart h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.kart p {
+  color: #4b5563;
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.kart a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--renk-ana);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  max-width: 900px;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 1rem 1rem 0 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.images-alani image{
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: var(--kose);
+  display: block;
+}
