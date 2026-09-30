@@ -41,8 +41,6 @@ header nav a {
 header nav a:hover {
   text-decoration: underline;
 }
-
-/* Ana Gövde */
 main {
   max-width: 900px;
   margin: 1.5rem auto;
@@ -53,8 +51,6 @@ main h2 {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
-/* Grid Kartlar */
 .etkinlikler {
   display: grid;
   gap: var(--bosluk-m);
@@ -102,4 +98,64 @@ footer {
   border-top: 1px solid #e5e7eb;
   font-size: 0.85rem;
   color: #6b7280;
+}
+etkinlik-form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.form-grup label {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.form-grup input,
+.form-grup select,
+.form-grup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #9ca3af;
+  border-radius: var(--kose);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+
+.form-grup input.hata {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%; 
+  background-color: var(--renk-ana);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: var(--kose);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 650px) {
+  .btn-primary {
+    width: auto;
+    padding: 0.7rem 2rem;
+  }
 }
